@@ -1,0 +1,38 @@
+.all{
+	width: 100%;
+	background: #f7f7f7;
+}
+.body{
+	width: 800px;height: 600px;
+	margin:0 auto;
+}
+.head{
+	width: 100%;
+	height: 80px;
+	background: deepskyblue;
+}
+.head1 head{
+	width: 1440px;
+	margin: 0 auto;
+}
+.head1 h3{
+	color: white;
+	font-size: 22px;
+	font-family:  "blackadder itc";
+	text-align: center;
+	line-height: 80px;
+}
+.copy{
+	height: 50px;
+	border-top: solid 1px #edf0f5;
+}
+.copy p{
+	text-align: center;
+	font-size: 14px;
+	line-height: 50px;
+}
+
+table{
+/*	width: 800px*/;
+	border: solid 1px deepskyblue;
+}

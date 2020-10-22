@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>购物车</title>
+		<link rel="stylesheet" href="../css/car.css"/>
+		<link rel="stylesheet" href="../css/layout.css"/>
+		<style type="text/css">
+			img{
+				width: 100px;height: 100px;
+			}
+			th{
+				border: solid 1px deepskyblue;
+				font-size: 18px;
+			}
+			td{
+				border: solid 1px deepskyblue;
+				width: 200px;
+				text-align: center;
+				font-size: 16px;
+				color: deepskyblue;
+			}
+			span{
+				display: inline-block;
+				width: 35px;height: 20px;
+				border: solid 1px deepskyblue;
+			}
+			.add,.jian{
+				background: deepskyblue;
+				color: white;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="head">
+			<div class="head1">
+				<h3>这是你的专属VIVO购物车</h3>
+			</div>
+		</div>
+		<div class="all">
+			<div class="body">
+				<table>
+			        <thead>
+			            <tr>            
+			                <th>商品名称</th>
+			                <th>商品图片</th>
+			                <th>单价</th>
+			                <th>数量</th>
+			                <th>操作</th>
+			            </tr>
+			        </thead>
+			        <tbody>
+			           
+			        </tbody>
+			    </table>
+			    <div style="font-size: 16px;">没有更多商品了</div>
+			</div>	
+		</div>
+		<div class="copy">
+			<p>2011-2020广东天焦网络科技有限公司版权所有│隐私政策|法律声明│营业执照|粤B2-20080267|粤ICP备14052990号|粤公网安备44190002004246号</p>
+		</div>
+	</body>
+</html>
+<script src="../js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	showTbody();
+        function showTbody(){
+            $.ajax({
+                url:'http://localhost/project/interface/showlist.php',
+                success:function(res){
+                    if(res.code){
+                        var arr = res.data;
+                        if(res.data){
+                            //如果有商品,table显示,div隐藏
+                            $('table').show();
+//                          $('div').hide();
+                            //在table里面展示商品信息
+                            $('tbody').empty();
+                            console.log(arr)
+                            $.each(arr,function(index,item){
+                                $('tbody').append(`<tr id="${item.product_Id}">
+                                    <td>${item.product_name}</td>
+                                    <td>
+                                        <img src="${item.product_img}" alt="">
+                                    </td>
+                                    <td>${item.product_price}</td>
+                                    <td>
+                                        <span class='add'>+</span>
+                                        <span>${item.product_num}</span>
+                                        <span class="jian">-</span>
+                                    </td>
+                                    <td class="del">删除</td>
+                                </tr>`)
+                            })
+                        }              
+
+                        
+                    }else{
+                        //如果没有商品,table隐藏,div显示
+                        $('table').hide();
+                        $('div').show();                       
+                    } 
+                },
+                dataType:'json',
+                cache:false
+            })
+        }
+
+        // 点击+增加一个商品数量,点击-减少一个商品数量
+        $('tbody').click(function(e){
+            var target = e.target;
+            console.log($(target))
+            if((target.className=='add')||(target.className=='jian')){
+                $.ajax({
+                    url:'http://localhost/project/interface/updatewq.php',
+                    data:{
+                        type:target.className,
+                        id:$(target).parents('tr').attr('id')
+                    },
+                    success:function(res){
+                    	console.log(res)
+                        if(res.code){
+                        	console.log(1)
+                            showTbody()
+                        }
+                    },
+                    dataType:'json'
+                })
+
+            }else if(target.className=='del'){
+                $.ajax({
+                    url:'http://localhost/project/interface/delwq.php',
+                    data:{
+                        id:$(target).parents('tr').attr('id')
+                    },
+                    success:function(res){
+                        if(res.code){
+                            showTbody()
+                        }
+                    },
+                    dataType:'json'
+                })
+            }
+        })</script>

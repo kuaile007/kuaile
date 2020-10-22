@@ -1,0 +1,422 @@
+*{margin: 0; padding: 0;}
+body dl:hover{
+	box-shadow: 0 0 3px 2px deepskyblue;
+	border-radius: 10px;
+}
+.main{
+	width: 1440px; margin: 0 auto;
+}
+.main a:hover{
+	color: deepskyblue;
+}
+
+.nav{
+	background: #242933;
+	width: 100%;
+	height: 42px;	
+}
+.nav a{
+	font-size: 12px;
+	color: ghostwhite;
+}
+.nav p{
+	float: left;
+	line-height: 42px;
+}
+.nav p a{
+	padding-right: 40px;
+}
+.nav ul{
+	float: right;
+}
+.nav ul li{
+	list-style: none;
+	float: left;
+	line-height: 42px;
+	padding-right: 30px;
+}
+.headtop{
+	width: 100%;
+	background: #f7f7f7;
+}
+.head{
+	width: 1440px;	
+	margin: 0 auto; overflow: hidden;
+}
+#ol,#ol1,#ol2,#ol3{
+	width: 1440px;height: 200px;
+	display: none;
+	font-size: 18px;
+	text-align: center;
+	line-height: 100px;
+	background: #e1ecfe;
+	color: white;
+	z-index: 9999;
+	position: absolute;
+	left:40px;
+}
+#ol img{width: 150px;padding-top: 25px;padding-left: 25px;}
+#ol1 img{width: 150px;padding-top: 25px;padding-left: 25px;}
+#ol2 img{width: 150px;padding-top: 25px;padding-left: 25px;}
+#ol3 img{width: 150px;padding-top: 25px;padding-left: 25px;}
+.hright{
+	width: 128px;
+	float: left;
+}
+/*.headtop{
+	position: relative;
+	overflow: hidden;
+}*/
+.head ul{
+	float: left;
+	margin-left: 200px;
+}
+.head ul li{
+	float: left;
+	line-height: 108px;
+	padding-right: 30px;
+}
+.head ul li a{
+	font-size: 16px;
+}
+#search{
+	width: 200px;height:30px;
+	background: url("../img/xiaomi_03.gif") no-repeat;
+	background-position:top 5px left 170px;
+	border: solid 1px #7F7F7F;
+	float:left;
+	border-radius: 15px;
+	margin:36px 65px;
+	position: absolute;
+}
+.headbot{
+	width: 100%;
+	height: 450px;
+}
+.swiper-wrapper img{
+	width: 100%;
+	height: 450px;
+}
+.swiper-container ul{
+	width: 250px;height: 400px;
+	background: #fefdfd;
+	z-index: 1;
+	position: absolute;
+	top: 25px;left: 150px;
+}
+.swiper-container ul li{
+	width: 200px;height: 50px;
+}
+.swiper-container ul li i{
+	float: right;
+}
+.swiper-container ul li:first-child{
+	padding-top:25px;
+}
+.swiper-container ul li a{
+	font-size: 16px;
+	line-height: 50px;
+	padding-left: 35px;
+}
+
+.bodybot{
+	width: 100%;
+	background: #f7f7f7;
+}
+.login{
+	width: 1240px;
+	margin: 0 auto;
+}
+.navimg img{
+	width: 405px;
+	padding-left: 5px;
+	padding-top: 30px;
+}
+.miaosha{
+	height:510px;
+	overflow: hidden;
+}
+
+.mtop{
+	height: 50px;
+	margin-top: 35px;
+	overflow: hidden;
+}
+.mtop img{
+	float: left;
+}
+.mtop i{
+	font-size: 18px;
+	line-height: 50px;
+}
+.mtop span{
+	display: inline-block;
+	width: 38px;height: 32px;
+	text-align: center;
+	line-height: 32px;
+	border-radius: 5px;
+	background-color: #ec0404;
+	font-size: 18px;
+	color: white;
+}
+.mbot dl{
+	width: 300px;
+	height: 400px;
+	background: #fff;
+	margin-top: 20px;
+	margin-right: 5px;
+	float: left;
+    margin-left: 5px;
+}
+.mbot dl img{
+	width: 165px;
+	padding-top: 30px;
+	padding-left: 70px;
+}
+.mbot dl dd{
+	font-size: 16px;
+	text-align: center;
+	padding-top: 50px;
+}
+.mbot dl span{
+	display: block;
+	font-size: 12px;
+	color: #5f5f5f;
+	text-align: center;
+	padding-top: 30px;
+}
+.mbot dl p{
+	text-align: center;
+	color: red;
+	font-size: 24px;
+	padding-top: 30px;
+}
+
+
+.remai{
+	height: 600px;
+}
+.remai h2{
+	text-align: center;
+	line-height: 100px;
+	font-size: 30px;
+}
+.rbot dl{
+	width: 403px;
+	height: 500px;
+	background: #fff;
+	margin-right: 10px;
+	float: left;
+}
+.rbot dl img{
+	width: 180px;
+	padding-top: 85px;
+	padding-left: 115.5px;
+}
+.rbot dl dd{
+	font-size: 20px;
+	text-align: center;
+	padding-top: 50px;
+}
+.rbot dl span{
+	display: block;
+	font-size: 14px;
+	color: #5f5f5f;
+	text-align: center;
+	margin-top: -40px;
+}
+.rbot dl p{
+	text-align: center;
+	color: red;
+	font-size: 24px;
+	padding-top: 30px;
+}
+
+
+.great h2{
+	text-align: center;
+	line-height: 100px;
+	font-size: 30px;
+}
+.gtop img{
+	width: 615px;
+	height: 400px;
+	padding-top: 20px;
+}
+.gtop dl{
+	width: 305px;
+	height: 400px;
+	background: #fff;
+	margin-top: 20px;
+	margin-right: 5px;
+	float: right;
+}
+.gtop dl img{
+	width: 165px;
+	height: 165px;
+	padding-top: 30px;
+	padding-left: 70px;
+}
+.gtop dl dd{
+	font-size: 16px;
+	text-align: center;
+	padding-top: 50px;
+}
+.gtop dl span{
+	display: block;
+	font-size: 12px;
+	color: #5f5f5f;
+	text-align: center;
+	margin-top: -40px;
+}
+.gtop dl p{
+	text-align: center;
+	color: red;
+	font-size: 24px;
+	padding-top: 30px;
+}
+
+.gbot{
+	overflow: hidden;
+	height: 430px;
+}
+.gbot img{
+	/*width: 615px;*/
+	height: 400px;
+	padding-top: 20px;
+}
+.gbot dl{
+	width: 300px;
+	height: 400px;
+	background: #fff;
+	margin-top: 20px;
+	margin-right: 5px;
+	float: left;
+    margin-left: 5px;
+}
+.gbot dl img{
+	width: 165px;
+	height: 165px;
+	padding-top: 30px;
+	padding-left: 70px;
+}
+.gbot dl dd{
+	font-size: 16px;
+	text-align: center;
+	padding-top: 50px;
+}
+.gbot dl span{
+	display: block;
+	font-size: 12px;
+	color: #5f5f5f;
+	text-align: center;
+	margin-top: -40px;
+}
+.gbot dl p{
+	text-align: center;
+	color: red;
+	font-size: 24px;
+	padding-top: 30px;
+}
+
+
+.jinpin h2{
+	text-align: center;
+	line-height: 100px;
+	font-size: 30px;
+}
+.jinpin ul{
+	float: right;
+	margin-top: -50px;
+}
+.jinpin ul li{
+	float: left;
+	padding-left: 35px;
+}
+.jinpin ul li a{
+	font-size: 14px;
+}
+.jbot{
+	overflow: hidden;
+	height: 870px;
+}
+.jbot img{
+	width: 615px;
+	height: 400px;
+	padding-top: 20px;
+}
+.jbot dl{
+	width: 300px;
+	height: 400px;
+	background: #fff;
+	margin-top: 6px;
+	margin-right: 5px;
+	float: left;
+    margin-left: 5px;
+}
+.jbot dl img{
+	width: 165px;
+	height: 165px;
+	padding-top: 30px;
+	padding-left: 70px;
+}
+.jbot dl dd{
+	font-size: 16px;
+	text-align: center;
+	padding-top: 50px;
+}
+.jbot dl span{
+	display: block;
+	font-size: 12px;
+	color: #5f5f5f;
+	text-align: center;
+	margin-top: -40px;
+}
+.jbot dl p{
+	text-align: center;
+	color: red;
+	font-size: 24px;
+	padding-top: 30px;
+}
+
+.footer{
+	width: 100%;
+	background: #fff;
+	margin-top: 100px;
+}
+.footer-left img{
+	width: 180px;
+	margin-top: 0;
+	padding-left: 450px;
+}
+.footer-left{
+	width: 1440px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+.footer-left ul{
+	float: left;
+	width: 155px;
+}
+
+.footer-left ul li{
+	height: 30px;
+}
+.footer-left ul li:first-child{
+	padding-top: 30px;
+}
+.footer-left ul li a{
+	font-size: 12px;
+    color: #575c66;
+    line-height: 45px;
+}
+.copy{
+	height: 50px;
+	margin-top:50px ;
+	border-top: solid 1px #edf0f5;
+}
+.copy p{
+	text-align: center;
+	font-size: 14px;
+	line-height: 50px;
+}
