@@ -1,7 +1,8 @@
 import loadable from '@loadable/component'
 import {
   DotChartOutlined,
-  DribbbleOutlined
+  GitlabOutlined,
+  RadarChartOutlined
 } from '@ant-design/icons'
 
 const TestRedux = loadable(()=>import('./home/TestRedux'))
@@ -17,7 +18,7 @@ export default [
   {
     id: 11,
     text: '概况管理',
-    icon: <DotChartOutlined />,
+    icon: <RadarChartOutlined />,
     children: [
       {
         id: 1110,
@@ -56,8 +57,8 @@ export default [
   },
   {
     id: 13,
-    text:"胡辉列表",
-    icon:<DribbbleOutlined />,
+    text:"王子列表",
+    icon:<GitlabOutlined />,
     children :[
       {
         id:1211,
